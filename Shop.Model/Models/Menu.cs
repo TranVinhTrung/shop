@@ -24,12 +24,12 @@ namespace Shop.Model.Models
         public int GroupID { set; get; }
 
         [ForeignKey("GroupID")]
-        public virtual MenuGroup MenuGroup { get; set; }
+        public virtual MenuGroup MenuGroup { set; get; }
 
         [MaxLength(10)]
         public string Target { set; get; }
 
-        [Required]
+        
         public bool Status { set; get; }
     }
 }

@@ -12,12 +12,13 @@ namespace Shop.Model.Models
     public class PostTag
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Tự động tăng ID
+        [Column(Order = 1)]
         public int PostID { set; get; }
         
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Tự động tăng ID
-        public int TagID { set; get; }
+        [Column(TypeName ="varchar", Order = 2)]
+        [MaxLength(50)]
+        public string TagID { set; get; }
 
         [ForeignKey("PostID")]
         public virtual Post Post { set; get; }

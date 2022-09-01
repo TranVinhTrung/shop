@@ -7,11 +7,11 @@ namespace Shop.Model.Models
     public class OrderDetail
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Tự động tăng ID
+        [Column(Order = 1)]
         public int OrderID { set; get; }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Tự động tăng ID
+        [Column(Order = 2)]
         public int ProductID { set; get; }
 
         [Required]
@@ -21,6 +21,6 @@ namespace Shop.Model.Models
         public virtual Order Order { set; get; }
 
         [ForeignKey("ProductID")]
-        public virtual ProductCategory ProductCategory { set; get; }
+        public virtual Product Product { set; get; }
     }
 }

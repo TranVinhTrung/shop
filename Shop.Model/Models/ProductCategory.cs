@@ -17,11 +17,11 @@ namespace Shop.Model.Models
         public int ID { set; get; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string Name { set; get; }
 
         [Required]
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string Alias { set; get; }
 
         [MaxLength(500)]
@@ -29,12 +29,12 @@ namespace Shop.Model.Models
         public int? ParentID { set; get; }
         public int? DisplayOrder { set; get; }
 
-        [MaxLength(250)]
+        [MaxLength(256)]
         public string Image { set; get; }
         public bool? HomeFlag { set; get; }
 
         public virtual IEnumerable<Product> Products { get; set; }
         
-        public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
+        //public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
     }
 }

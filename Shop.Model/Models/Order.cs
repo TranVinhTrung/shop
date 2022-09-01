@@ -32,9 +32,7 @@ namespace Shop.Model.Models
         [MaxLength(256)]
         public string CustomerMessage { set; get; }
 
-        public DateTime CreatedDate { set; get; }
-
-        [MaxLength(256)]
+        public DateTime? CreatedDate { set; get; }
         public string CreatedBy { set; get; }
 
         [MaxLength(256)]
@@ -42,7 +40,7 @@ namespace Shop.Model.Models
 
         public string PaymentStatus { set; get; }
 
-        [Required]
+
         public bool Status { set; get; }
 
         public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }

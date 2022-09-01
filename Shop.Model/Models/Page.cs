@@ -14,16 +14,11 @@ namespace Shop.Model.Models
         [MaxLength(256)]
         public string Name { set; get; }
 
+        [Column(TypeName = "varchar")]
         [MaxLength(256)]
-        public string Content { set; get; }
-
-        [MaxLength(256)]
-        public string MetaDescription { set; get; }
-
-        [MaxLength(256)]
-        public string MetaKeyword { set; get; }
-
         [Required]
-        public bool Status { set; get; }
+        public string Alias { set; get; }
+
+        public string Content { set; get; }
     }
 }
